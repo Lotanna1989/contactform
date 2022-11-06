@@ -17,12 +17,13 @@ function Contact() {
   
   const {register, formState: {errors}, handleSubmit} = useForm();
   const onSubmit = (data) => console.log(data);
+ 
   
   
 
   return (
     
-    <div style={{width: "750px",
+    <div style={{width: "740px",
     }}>
     <form id="form" onSubmit={handleSubmit(onSubmit)}>
     <div className='main'  style={{ display: "flex",
@@ -62,10 +63,10 @@ function Contact() {
                     
                      
                      <div  style={{ marginBottom:"25px",  width:"100%",display:"flex", justifyContent:"space-between", flexDirection:"row", flexWrap:"wrap"}}>
-                        <div style={{width:"600px", marginBottom:"25px"}}>
-                      <label  id='first_name'>Firstname </label>
+                        <div  style={{width:"380px", marginBottom:"25px"}}>
+                      <label  >Firstname </label>
                     
-                    <input  {...register("firstname", {required: true})} style={{
+                    <input id='first_name'  {...register("firstname", {required: true})} style={{
                       marginRight:"",border:" 1px solid #D0D5DD", boxSizing: "border-box",
 
                       /* Auto layout */
@@ -94,12 +95,12 @@ function Contact() {
                       flex: "none",
                       order: "1",
                       alignSelf: "stretch",
-                      flexGrow: "0",}} name="firstname" id="first_name"  placeholder='Enter your first name' />
+                      flexGrow: "0",}} name="firstname"   placeholder='Enter your first name' />
                       <error>
                       {errors.firstname?.type === "required" && "firstname please"}</error>
                     </div>
 
-                    <div style={{width:"600px",}}>
+                    <div  style={{width:"380px",}}>
                    
                    
                     <label>Lastname</label>
@@ -172,7 +173,7 @@ function Contact() {
                     order: "1",
                     alignSelf: "stretch",
                     flexGrow: "0", marginBottom:"25px"}}/>
-                    <error> {errors.email?.type === "required" && "your email"}</error>
+                    <error> {errors.email?.type === "required" }</error>
                     </div>
 
 
@@ -181,7 +182,7 @@ function Contact() {
                       <div style={{marginBottom:"25px"}} >
                     <label id='message'>Message</label> 
                     <textarea {...register("message", {required: true})} id='message'  name="message" placeholder="Send me a message and i will reply you as soon as possible" {...register("message",{required: true})} />
-                    <error> {errors.email?.type === "required" && "we need ur message"}</error>
+                    <error> {errors.email?.type === "required"}</error>
                     </div>
                     
 
@@ -192,7 +193,7 @@ function Contact() {
                    </span>
                    </div>
                    
-                    <button type='submit'  name="btn"  id="btn__submit" >
+                    <button type='submit'  name="btn"  id="btn_submit" >
                             <p>Send Message</p>
                     </button>
                     

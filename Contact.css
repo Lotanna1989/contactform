@@ -164,11 +164,15 @@ label {
                                 }
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-width:700px) {
 
-    
-    
-    
+    input.sr1 {
+        width:20%
+    }
+
+    input.sr2{
+        width:20%
+    }
 }
 
 
